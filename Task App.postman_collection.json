@@ -50,7 +50,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Test11111 User\",\r\n    \"email\": \"test11111@example.com\",\r\n    \"password\": \"password123\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Test User\",\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"password123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -58,12 +58,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/signup",
+							"raw": "{{base_url}}/register",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"signup"
+								"register"
 							]
 						}
 					},
@@ -77,15 +77,15 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 06 May 2025 11:48:58 GMT"
+							"value": "Thu, 08 May 2025 13:41:52 GMT"
 						},
 						{
 							"key": "Content-Length",
-							"value": "276"
+							"value": "216"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"user\": {\n        \"ID\": 7,\n        \"id\": \"9191bed8-eee1-47bd-999f-70e034bfd3a8\",\n        \"name\": \"Test11111 User\",\n        \"email\": \"test11111@example.com\",\n        \"password\": \"$2a$10$u5UL/FUbl/Q6gN3WTEuYZ.mYWoZX6gKnbBvNXrssI2SwHy4uHhfe.\",\n        \"CreatedAt\": \"2025-05-06T14:48:56.302617Z\",\n        \"UpdatedAt\": \"2025-05-06T14:48:56.302617Z\"\n    }\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n            \"name\": \"Test User\",\n            \"email\": \"test@example.com\",\n            \"created_at\": \"2025-05-08T13:41:52.72098091Z\",\n            \"updated_at\": \"2025-05-08T13:41:52.720981086Z\"\n        }\n    }\n}"
 				}
 			]
 		},
@@ -118,7 +118,13 @@
 					"name": "logged in successfully.",
 					"originalRequest": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"password123\"\r\n}",
@@ -148,19 +154,135 @@
 						},
 						{
 							"key": "Set-Cookie",
-							"value": "Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDkxMjQwOTMsImlhdCI6MTc0NjUzMjA5MywibmJmIjoxNzQ2NTMyMDkzLCJzdWIiOiJlYTQ0YzA4ZS1jMzAwLTQyNTgtYmZjMC1jZGIzODM3Y2Q2YmUifQ.NVQL9V_MSPaPZqtiepFbEOpg4MrggiCIxL9VoN7K9rI; Path=/; Expires=Thu, 05 Jun 2025 11:48:13 GMT; HttpOnly; SameSite=Lax"
+							"value": "Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDczMTY1NDgsInN1YiI6ImEwZGUyYThjLWQwZjctNDEzNC04MTczLWVlZjg3YTEyNTk3NSJ9.dpw1TUmlBjDN4dtECidH_Ct-rAdMk3vEK07rY5ome6s; Path=/; Expires=Thu, 15 May 2025 13:42:28 GMT; HttpOnly; SameSite=Lax"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "TestCookie=test-value; Path=/; Expires=Thu, 08 May 2025 14:42:28 GMT"
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 06 May 2025 11:48:13 GMT"
+							"value": "Thu, 08 May 2025 13:42:28 GMT"
 						},
 						{
 							"key": "Content-Length",
-							"value": "486"
+							"value": "387"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDkxMjQwOTMsImlhdCI6MTc0NjUzMjA5MywibmJmIjoxNzQ2NTMyMDkzLCJzdWIiOiJlYTQ0YzA4ZS1jMzAwLTQyNTgtYmZjMC1jZGIzODM3Y2Q2YmUifQ.NVQL9V_MSPaPZqtiepFbEOpg4MrggiCIxL9VoN7K9rI\",\n    \"user\": {\n        \"ID\": 2,\n        \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n        \"name\": \"Test User\",\n        \"email\": \"test@example.com\",\n        \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n        \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n        \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n    }\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDczMTY1NDgsInN1YiI6ImEwZGUyYThjLWQwZjctNDEzNC04MTczLWVlZjg3YTEyNTk3NSJ9.dpw1TUmlBjDN4dtECidH_Ct-rAdMk3vEK07rY5ome6s\",\n        \"user\": {\n            \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n            \"name\": \"Test User\",\n            \"email\": \"test@example.com\",\n            \"created_at\": \"2025-05-08T13:41:52.722602Z\",\n            \"updated_at\": \"2025-05-08T13:41:52.722602Z\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Check Cookie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/debug/cookie",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"debug",
+						"cookie"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Check Cookie",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/debug/cookie",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"debug",
+								"cookie"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "DebugCookie=test-value; Path=/; Max-Age=3600"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 08 May 2025 13:43:01 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "916"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"cookies\": [\n            {\n                \"Name\": \"Authorization\",\n                \"Value\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDczMTY1NDgsInN1YiI6ImEwZGUyYThjLWQwZjctNDEzNC04MTczLWVlZjg3YTEyNTk3NSJ9.dpw1TUmlBjDN4dtECidH_Ct-rAdMk3vEK07rY5ome6s\",\n                \"Quoted\": false,\n                \"Path\": \"\",\n                \"Domain\": \"\",\n                \"Expires\": \"0001-01-01T00:00:00Z\",\n                \"RawExpires\": \"\",\n                \"MaxAge\": 0,\n                \"Secure\": false,\n                \"HttpOnly\": false,\n                \"SameSite\": 0,\n                \"Partitioned\": false,\n                \"Raw\": \"\",\n                \"Unparsed\": null\n            },\n            {\n                \"Name\": \"DebugCookie\",\n                \"Value\": \"test-value\",\n                \"Quoted\": false,\n                \"Path\": \"\",\n                \"Domain\": \"\",\n                \"Expires\": \"0001-01-01T00:00:00Z\",\n                \"RawExpires\": \"\",\n                \"MaxAge\": 0,\n                \"Secure\": false,\n                \"HttpOnly\": false,\n                \"SameSite\": 0,\n                \"Partitioned\": false,\n                \"Raw\": \"\",\n                \"Unparsed\": null\n            },\n            {\n                \"Name\": \"TestCookie\",\n                \"Value\": \"test-value\",\n                \"Quoted\": false,\n                \"Path\": \"\",\n                \"Domain\": \"\",\n                \"Expires\": \"0001-01-01T00:00:00Z\",\n                \"RawExpires\": \"\",\n                \"MaxAge\": 0,\n                \"Secure\": false,\n                \"HttpOnly\": false,\n                \"SameSite\": 0,\n                \"Partitioned\": false,\n                \"Raw\": \"\",\n                \"Unparsed\": null\n            }\n        ],\n        \"message\": \"Debug cookie set\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/profile",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Profile",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/profile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 08 May 2025 13:43:46 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "211"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n            \"name\": \"Test User\",\n            \"email\": \"test@example.com\",\n            \"created_at\": \"2025-05-08T13:41:52.722602Z\",\n            \"updated_at\": \"2025-05-08T13:41:52.722602Z\"\n        }\n    }\n}"
 				}
 			]
 		},
@@ -194,7 +316,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDg5NjEwMTcsImlhdCI6MTc0NjM2OTAxNywibmJmIjoxNzQ2MzY5MDE3LCJzdWIiOiIyYzNkZTg1OC01Y2VlLTQ0YTgtYjY0NC00NjY5NzA0ZmY0NGQifQ.n2P44PSbmKbyFePRFenBi5y-cGKoQTqGMLiKvN2B4Fw",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDcyOTA2ODUsInN1YiI6ImVhNDRjMDhlLWMzMDAtNDI1OC1iZmMwLWNkYjM4MzdjZDZiZSJ9.DQyE0gDZEXL1D8wtOs6k6_lSryL1qRVosIrPLMDStO0",
 								"type": "text",
 								"disabled": true
 							}
@@ -219,15 +341,15 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 06 May 2025 11:47:50 GMT"
+							"value": "Thu, 08 May 2025 13:44:17 GMT"
 						},
 						{
 							"key": "Content-Length",
-							"value": "1579"
+							"value": "410"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"users\": [\n        {\n            \"ID\": 1,\n            \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"name\": \"Test User5577\",\n            \"email\": \"test75577@example.com\",\n            \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n            \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n            \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n        },\n        {\n            \"ID\": 2,\n            \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"name\": \"Test User\",\n            \"email\": \"test@example.com\",\n            \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n            \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n            \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n        },\n        {\n            \"ID\": 3,\n            \"id\": \"fefee336-1435-4d68-8df7-66d8ba488b1c\",\n            \"name\": \"Test1 User\",\n            \"email\": \"test1@example.com\",\n            \"password\": \"$2a$10$KAMTiw63IIPZHr.ZCAXcseuumqzorEH6JracmGwvCcsKNZx7.RwCS\",\n            \"CreatedAt\": \"2025-05-06T10:06:27.759801Z\",\n            \"UpdatedAt\": \"2025-05-06T10:06:27.759801Z\"\n        },\n        {\n            \"ID\": 4,\n            \"id\": \"3176f652-d692-4a50-bd67-be8c1f5b9d46\",\n            \"name\": \"Test11 User\",\n            \"email\": \"test11@example.com\",\n            \"password\": \"$2a$10$OMg7RBMcolIgDmGUdtXwg.RxB7EU0XYqhFcAoWDw.4/xztkVLRnjC\",\n            \"CreatedAt\": \"2025-05-06T10:27:10.80569Z\",\n            \"UpdatedAt\": \"2025-05-06T10:27:10.80569Z\"\n        },\n        {\n            \"ID\": 5,\n            \"id\": \"24a4d2d5-ff08-4d3b-b7e7-d0a708d92331\",\n            \"name\": \"Test111 User\",\n            \"email\": \"test111@example.com\",\n            \"password\": \"$2a$10$aWcWTTWGq7HzlNa5it8CHO5ktOCx1KmThhBmDu8ZJ7oqKRbjmFNba\",\n            \"CreatedAt\": \"2025-05-06T11:11:31.667876Z\",\n            \"UpdatedAt\": \"2025-05-06T11:11:31.667876Z\"\n        },\n        {\n            \"ID\": 6,\n            \"id\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n            \"name\": \"Test1111 User\",\n            \"email\": \"test1111@example.com\",\n            \"password\": \"$2a$10$CyZ9MomZQvjGetLQDoBE.eR1Kk3LGfczj5r1xqA6AihREnNIMVk/6\",\n            \"CreatedAt\": \"2025-05-06T12:39:05.973732Z\",\n            \"UpdatedAt\": \"2025-05-06T12:39:05.973732Z\"\n        }\n    ]\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"users\": [\n            {\n                \"id\": \"7a1525b0-fce0-4c5f-be01-f553a9e7a786\",\n                \"name\": \"Test99ooooooo User\",\n                \"email\": \"test99ooooooo@example.com\",\n                \"created_at\": \"2025-05-08T13:41:15.973058Z\",\n                \"updated_at\": \"2025-05-08T13:41:15.973058Z\"\n            },\n            {\n                \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"created_at\": \"2025-05-08T13:41:52.722602Z\",\n                \"updated_at\": \"2025-05-08T13:41:52.722602Z\"\n            }\n        ]\n    }\n}"
 				}
 			]
 		},
@@ -283,7 +405,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"New Task 7777\",\r\n    \"description\": \"Task description\",\r\n    \"users\": [\r\n        {\r\n            \"id\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\"  \r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"title\": \"New Task 7777\",\r\n    \"description\": \"Task description\",\r\n    \"users\": [\r\n        {\r\n            \"id\": \"fb6383ed-7d90-42fc-8065-31146688de9d\"  \r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -310,15 +432,15 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 06 May 2025 11:40:44 GMT"
+							"value": "Thu, 08 May 2025 13:44:34 GMT"
 						},
 						{
 							"key": "Content-Length",
-							"value": "1149"
+							"value": "345"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"task\": {\n        \"ID\": 13,\n        \"id\": \"80bdfe78-5dc3-4821-80e4-f969b421d81c\",\n        \"title\": \"New Task 7777\",\n        \"description\": \"Task description\",\n        \"Completed\": false,\n        \"CreatedAt\": \"2025-05-06T11:40:44.481612Z\",\n        \"UpdatedAt\": \"2025-05-06T11:40:44.481612Z\",\n        \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n        \"CreatedBy\": {\n            \"ID\": 2,\n            \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"name\": \"Test User\",\n            \"email\": \"test@example.com\",\n            \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n            \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n            \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n        },\n        \"AssignedToID\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n        \"AssignedTo\": {\n            \"ID\": 6,\n            \"id\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n            \"name\": \"Test1111 User\",\n            \"email\": \"test1111@example.com\",\n            \"password\": \"$2a$10$CyZ9MomZQvjGetLQDoBE.eR1Kk3LGfczj5r1xqA6AihREnNIMVk/6\",\n            \"CreatedAt\": \"2025-05-06T12:39:05.973732Z\",\n            \"UpdatedAt\": \"2025-05-06T12:39:05.973732Z\"\n        },\n        \"users\": [\n            {\n                \"ID\": 6,\n                \"id\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n                \"name\": \"Test1111 User\",\n                \"email\": \"test1111@example.com\",\n                \"password\": \"$2a$10$CyZ9MomZQvjGetLQDoBE.eR1Kk3LGfczj5r1xqA6AihREnNIMVk/6\",\n                \"CreatedAt\": \"2025-05-06T12:39:05.973732Z\",\n                \"UpdatedAt\": \"2025-05-06T12:39:05.973732Z\"\n            }\n        ]\n    }\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"task\": {\n            \"id\": \"19b42826-7111-45ab-b60e-1e78284a51ab\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"completed\": false,\n            \"created_at\": \"2025-05-08T13:44:34.212545Z\",\n            \"updated_at\": \"2025-05-08T13:44:34.212545Z\",\n            \"created_by\": {\n                \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\"\n            }\n        }\n    }\n}"
 				}
 			]
 		},
@@ -363,15 +485,15 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 06 May 2025 11:46:58 GMT"
+							"value": "Thu, 08 May 2025 13:45:23 GMT"
 						},
 						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
+							"key": "Content-Length",
+							"value": "348"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"tasks\": [\n        {\n            \"ID\": 7,\n            \"id\": \"499a9ca8-d785-4da5-9c51-003ceb8913b2\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T07:30:03.126029Z\",\n            \"UpdatedAt\": \"2025-05-06T07:30:03.126029Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"AssignedTo\": {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 5,\n            \"id\": \"f5355cb6-a8a7-4b8e-9ce3-4403cb3c84a3\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": true,\n            \"CreatedAt\": \"2025-05-06T06:59:13.090081Z\",\n            \"UpdatedAt\": \"2025-05-06T06:59:13.090081Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"3176f652-d692-4a50-bd67-be8c1f5b9d46\",\n            \"AssignedTo\": {\n                \"ID\": 4,\n                \"id\": \"3176f652-d692-4a50-bd67-be8c1f5b9d46\",\n                \"name\": \"Test11 User\",\n                \"email\": \"test11@example.com\",\n                \"password\": \"$2a$10$OMg7RBMcolIgDmGUdtXwg.RxB7EU0XYqhFcAoWDw.4/xztkVLRnjC\",\n                \"CreatedAt\": \"2025-05-06T10:27:10.80569Z\",\n                \"UpdatedAt\": \"2025-05-06T10:27:10.80569Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                },\n                {\n                    \"ID\": 2,\n                    \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                    \"name\": \"Test User\",\n                    \"email\": \"test@example.com\",\n                    \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                    \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n                },\n                {\n                    \"ID\": 3,\n                    \"id\": \"fefee336-1435-4d68-8df7-66d8ba488b1c\",\n                    \"name\": \"Test1 User\",\n                    \"email\": \"test1@example.com\",\n                    \"password\": \"$2a$10$KAMTiw63IIPZHr.ZCAXcseuumqzorEH6JracmGwvCcsKNZx7.RwCS\",\n                    \"CreatedAt\": \"2025-05-06T10:06:27.759801Z\",\n                    \"UpdatedAt\": \"2025-05-06T10:06:27.759801Z\"\n                },\n                {\n                    \"ID\": 4,\n                    \"id\": \"3176f652-d692-4a50-bd67-be8c1f5b9d46\",\n                    \"name\": \"Test11 User\",\n                    \"email\": \"test11@example.com\",\n                    \"password\": \"$2a$10$OMg7RBMcolIgDmGUdtXwg.RxB7EU0XYqhFcAoWDw.4/xztkVLRnjC\",\n                    \"CreatedAt\": \"2025-05-06T10:27:10.80569Z\",\n                    \"UpdatedAt\": \"2025-05-06T10:27:10.80569Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 8,\n            \"id\": \"57ce1111-1e95-4dc6-86b2-d444581a28ef\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T08:00:29.525996Z\",\n            \"UpdatedAt\": \"2025-05-06T08:00:29.525996Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"AssignedTo\": {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 10,\n            \"id\": \"bd99ff60-104f-472f-a9dc-7dd3bd009b6a\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T08:45:22.507832Z\",\n            \"UpdatedAt\": \"2025-05-06T08:45:22.507832Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"AssignedTo\": {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 11,\n            \"id\": \"64430453-5d35-4c4f-95ec-fa89a0e907a6\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T09:39:27.568255Z\",\n            \"UpdatedAt\": \"2025-05-06T09:39:27.568255Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"AssignedTo\": {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 12,\n            \"id\": \"7d7fff43-58a4-48e3-a89c-5b2419be9db4\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T11:39:27.56931Z\",\n            \"UpdatedAt\": \"2025-05-06T11:39:27.56931Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"AssignedTo\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 2,\n                    \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                    \"name\": \"Test User\",\n                    \"email\": \"test@example.com\",\n                    \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                    \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 13,\n            \"id\": \"80bdfe78-5dc3-4821-80e4-f969b421d81c\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": true,\n            \"CreatedAt\": \"2025-05-06T11:40:44.481612Z\",\n            \"UpdatedAt\": \"2025-05-06T11:40:44.481612Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n            \"AssignedTo\": {\n                \"ID\": 6,\n                \"id\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n                \"name\": \"Test1111 User\",\n                \"email\": \"test1111@example.com\",\n                \"password\": \"$2a$10$CyZ9MomZQvjGetLQDoBE.eR1Kk3LGfczj5r1xqA6AihREnNIMVk/6\",\n                \"CreatedAt\": \"2025-05-06T12:39:05.973732Z\",\n                \"UpdatedAt\": \"2025-05-06T12:39:05.973732Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 6,\n                    \"id\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n                    \"name\": \"Test1111 User\",\n                    \"email\": \"test1111@example.com\",\n                    \"password\": \"$2a$10$CyZ9MomZQvjGetLQDoBE.eR1Kk3LGfczj5r1xqA6AihREnNIMVk/6\",\n                    \"CreatedAt\": \"2025-05-06T12:39:05.973732Z\",\n                    \"UpdatedAt\": \"2025-05-06T12:39:05.973732Z\"\n                }\n            ]\n        }\n    ]\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"tasks\": [\n            {\n                \"id\": \"19b42826-7111-45ab-b60e-1e78284a51ab\",\n                \"title\": \"New Task 7777\",\n                \"description\": \"Task description\",\n                \"completed\": false,\n                \"created_at\": \"2025-05-08T13:44:34.212545Z\",\n                \"updated_at\": \"2025-05-08T13:44:34.212545Z\",\n                \"created_by\": {\n                    \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n                    \"name\": \"Test User\",\n                    \"email\": \"test@example.com\"\n                }\n            }\n        ]\n    }\n}"
 				}
 			]
 		},
@@ -402,13 +524,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/tasks/f5355cb6-a8a7-4b8e-9ce3-4403cb3c84a3",
+							"raw": "{{base_url}}/tasks/19b42826-7111-45ab-b60e-1e78284a51ab",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"tasks",
-								"f5355cb6-a8a7-4b8e-9ce3-4403cb3c84a3"
+								"19b42826-7111-45ab-b60e-1e78284a51ab"
 							]
 						}
 					},
@@ -422,15 +544,15 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 06 May 2025 11:46:28 GMT"
+							"value": "Thu, 08 May 2025 13:48:17 GMT"
 						},
 						{
 							"key": "Content-Length",
-							"value": "1915"
+							"value": "345"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"task\": {\n        \"ID\": 5,\n        \"id\": \"f5355cb6-a8a7-4b8e-9ce3-4403cb3c84a3\",\n        \"title\": \"New Task 7777\",\n        \"description\": \"Task description\",\n        \"Completed\": true,\n        \"CreatedAt\": \"2025-05-06T06:59:13.090081Z\",\n        \"UpdatedAt\": \"2025-05-06T06:59:13.090081Z\",\n        \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n        \"CreatedBy\": {\n            \"ID\": 2,\n            \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"name\": \"Test User\",\n            \"email\": \"test@example.com\",\n            \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n            \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n            \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n        },\n        \"AssignedToID\": \"3176f652-d692-4a50-bd67-be8c1f5b9d46\",\n        \"AssignedTo\": {\n            \"ID\": 4,\n            \"id\": \"3176f652-d692-4a50-bd67-be8c1f5b9d46\",\n            \"name\": \"Test11 User\",\n            \"email\": \"test11@example.com\",\n            \"password\": \"$2a$10$OMg7RBMcolIgDmGUdtXwg.RxB7EU0XYqhFcAoWDw.4/xztkVLRnjC\",\n            \"CreatedAt\": \"2025-05-06T10:27:10.80569Z\",\n            \"UpdatedAt\": \"2025-05-06T10:27:10.80569Z\"\n        },\n        \"users\": [\n            {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            },\n            {\n                \"ID\": 3,\n                \"id\": \"fefee336-1435-4d68-8df7-66d8ba488b1c\",\n                \"name\": \"Test1 User\",\n                \"email\": \"test1@example.com\",\n                \"password\": \"$2a$10$KAMTiw63IIPZHr.ZCAXcseuumqzorEH6JracmGwvCcsKNZx7.RwCS\",\n                \"CreatedAt\": \"2025-05-06T10:06:27.759801Z\",\n                \"UpdatedAt\": \"2025-05-06T10:06:27.759801Z\"\n            },\n            {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            {\n                \"ID\": 4,\n                \"id\": \"3176f652-d692-4a50-bd67-be8c1f5b9d46\",\n                \"name\": \"Test11 User\",\n                \"email\": \"test11@example.com\",\n                \"password\": \"$2a$10$OMg7RBMcolIgDmGUdtXwg.RxB7EU0XYqhFcAoWDw.4/xztkVLRnjC\",\n                \"CreatedAt\": \"2025-05-06T10:27:10.80569Z\",\n                \"UpdatedAt\": \"2025-05-06T10:27:10.80569Z\"\n            }\n        ]\n    }\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"task\": {\n            \"id\": \"19b42826-7111-45ab-b60e-1e78284a51ab\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"completed\": false,\n            \"created_at\": \"2025-05-08T13:44:34.212545Z\",\n            \"updated_at\": \"2025-05-08T13:44:34.212545Z\",\n            \"created_by\": {\n                \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\"\n            }\n        }\n    }\n}"
 				}
 			]
 		},
@@ -457,13 +579,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/tasks/e7482402-60f4-43fa-b3da-e1161b292f7c",
+							"raw": "{{base_url}}/tasks/5db36c24-a9ba-4181-b9b3-d5ecd65f5c40",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"tasks",
-								"e7482402-60f4-43fa-b3da-e1161b292f7c"
+								"5db36c24-a9ba-4181-b9b3-d5ecd65f5c40"
 							]
 						}
 					},
@@ -477,15 +599,15 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 06 May 2025 08:13:04 GMT"
+							"value": "Thu, 08 May 2025 09:50:21 GMT"
 						},
 						{
 							"key": "Content-Length",
-							"value": "1199"
+							"value": "55"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"task\": {\n        \"ID\": 9,\n        \"id\": \"e7482402-60f4-43fa-b3da-e1161b292f7c\",\n        \"title\": \"New Task 7777\",\n        \"description\": \"Task description\",\n        \"Completed\": false,\n        \"CreatedAt\": \"2025-05-06T08:12:02.346747Z\",\n        \"UpdatedAt\": \"2025-05-06T08:12:02.346747Z\",\n        \"deleted_at\": \"2025-05-06T11:13:04.0929885+03:00\",\n        \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n        \"CreatedBy\": {\n            \"ID\": 2,\n            \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"name\": \"Test User\",\n            \"email\": \"test@example.com\",\n            \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n            \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n            \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n        },\n        \"AssignedToID\": \"966913e2-5510-42e2-a032-564b1884df52\",\n        \"AssignedTo\": {\n            \"ID\": 1,\n            \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"name\": \"Test User5577\",\n            \"email\": \"test75577@example.com\",\n            \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n            \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n            \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n        },\n        \"users\": [\n            {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            }\n        ]\n    }\n}"
+					"body": "{\n    \"success\": true,\n    \"message\": \"Task deleted successfully\"\n}"
 				}
 			]
 		},
@@ -511,18 +633,18 @@
 			},
 			"response": [
 				{
-					"name": "Task completed successfully.",
+					"name": "Complete Task",
 					"originalRequest": {
-						"method": "POST",
+						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/tasks/80bdfe78-5dc3-4821-80e4-f969b421d81c/complete",
+							"raw": "{{base_url}}/tasks/19b42826-7111-45ab-b60e-1e78284a51ab/complete",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"tasks",
-								"80bdfe78-5dc3-4821-80e4-f969b421d81c",
+								"19b42826-7111-45ab-b60e-1e78284a51ab",
 								"complete"
 							]
 						}
@@ -537,15 +659,15 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 06 May 2025 11:44:28 GMT"
+							"value": "Thu, 08 May 2025 13:48:49 GMT"
 						},
 						{
 							"key": "Content-Length",
-							"value": "1148"
+							"value": "344"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"task\": {\n        \"ID\": 13,\n        \"id\": \"80bdfe78-5dc3-4821-80e4-f969b421d81c\",\n        \"title\": \"New Task 7777\",\n        \"description\": \"Task description\",\n        \"Completed\": true,\n        \"CreatedAt\": \"2025-05-06T11:40:44.481612Z\",\n        \"UpdatedAt\": \"2025-05-06T11:40:44.481612Z\",\n        \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n        \"CreatedBy\": {\n            \"ID\": 2,\n            \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"name\": \"Test User\",\n            \"email\": \"test@example.com\",\n            \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n            \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n            \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n        },\n        \"AssignedToID\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n        \"AssignedTo\": {\n            \"ID\": 6,\n            \"id\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n            \"name\": \"Test1111 User\",\n            \"email\": \"test1111@example.com\",\n            \"password\": \"$2a$10$CyZ9MomZQvjGetLQDoBE.eR1Kk3LGfczj5r1xqA6AihREnNIMVk/6\",\n            \"CreatedAt\": \"2025-05-06T12:39:05.973732Z\",\n            \"UpdatedAt\": \"2025-05-06T12:39:05.973732Z\"\n        },\n        \"users\": [\n            {\n                \"ID\": 6,\n                \"id\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n                \"name\": \"Test1111 User\",\n                \"email\": \"test1111@example.com\",\n                \"password\": \"$2a$10$CyZ9MomZQvjGetLQDoBE.eR1Kk3LGfczj5r1xqA6AihREnNIMVk/6\",\n                \"CreatedAt\": \"2025-05-06T12:39:05.973732Z\",\n                \"UpdatedAt\": \"2025-05-06T12:39:05.973732Z\"\n            }\n        ]\n    }\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"task\": {\n            \"id\": \"19b42826-7111-45ab-b60e-1e78284a51ab\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"completed\": true,\n            \"created_at\": \"2025-05-08T13:44:34.212545Z\",\n            \"updated_at\": \"2025-05-08T13:48:49.309641Z\",\n            \"created_by\": {\n                \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\"\n            }\n        }\n    }\n}"
 				}
 			]
 		},
@@ -572,20 +694,20 @@
 			},
 			"response": [
 				{
-					"name": "Task assigned successfully.",
+					"name": "Assign Task",
 					"originalRequest": {
-						"method": "POST",
+						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/tasks/80bdfe78-5dc3-4821-80e4-f969b421d81c/assign/ea44c08e-c300-4258-bfc0-cdb3837cd6be",
+							"raw": "{{base_url}}/tasks/19b42826-7111-45ab-b60e-1e78284a51ab/assign/a0de2a8c-d0f7-4134-8173-eef87a125975",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"tasks",
-								"80bdfe78-5dc3-4821-80e4-f969b421d81c",
+								"19b42826-7111-45ab-b60e-1e78284a51ab",
 								"assign",
-								"ea44c08e-c300-4258-bfc0-cdb3837cd6be"
+								"a0de2a8c-d0f7-4134-8173-eef87a125975"
 							]
 						}
 					},
@@ -599,15 +721,15 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 06 May 2025 11:49:51 GMT"
+							"value": "Thu, 08 May 2025 13:51:12 GMT"
 						},
 						{
 							"key": "Content-Length",
-							"value": "1393"
+							"value": "552"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"task\": {\n        \"ID\": 13,\n        \"id\": \"80bdfe78-5dc3-4821-80e4-f969b421d81c\",\n        \"title\": \"New Task 7777\",\n        \"description\": \"Task description\",\n        \"Completed\": true,\n        \"CreatedAt\": \"2025-05-06T11:40:44.481612Z\",\n        \"UpdatedAt\": \"2025-05-06T11:40:44.481612Z\",\n        \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n        \"CreatedBy\": {\n            \"ID\": 2,\n            \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"name\": \"Test User\",\n            \"email\": \"test@example.com\",\n            \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n            \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n            \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n        },\n        \"AssignedToID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n        \"AssignedTo\": {\n            \"ID\": 2,\n            \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"name\": \"Test User\",\n            \"email\": \"test@example.com\",\n            \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n            \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n            \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n        },\n        \"users\": [\n            {\n                \"ID\": 6,\n                \"id\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n                \"name\": \"Test1111 User\",\n                \"email\": \"test1111@example.com\",\n                \"password\": \"$2a$10$CyZ9MomZQvjGetLQDoBE.eR1Kk3LGfczj5r1xqA6AihREnNIMVk/6\",\n                \"CreatedAt\": \"2025-05-06T12:39:05.973732Z\",\n                \"UpdatedAt\": \"2025-05-06T12:39:05.973732Z\"\n            },\n            {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            }\n        ]\n    }\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"task\": {\n            \"id\": \"19b42826-7111-45ab-b60e-1e78284a51ab\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"completed\": true,\n            \"created_at\": \"2025-05-08T13:44:34.212545Z\",\n            \"updated_at\": \"2025-05-08T13:48:49.309641Z\",\n            \"created_by\": {\n                \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\"\n            },\n            \"assigned_to\": {\n                \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\"\n            },\n            \"users\": [\n                {\n                    \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n                    \"name\": \"Test User\",\n                    \"email\": \"test@example.com\"\n                }\n            ]\n        }\n    }\n}"
 				}
 			]
 		},
@@ -630,17 +752,16 @@
 			},
 			"response": [
 				{
-					"name": "Get User Tasks assigned.",
+					"name": "Get User Tasks assigned",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/users/tasks/assigned",
+							"raw": "{{base_url}}/tasks/assigned",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"users",
 								"tasks",
 								"assigned"
 							]
@@ -656,15 +777,15 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 06 May 2025 11:41:06 GMT"
+							"value": "Thu, 08 May 2025 13:51:27 GMT"
 						},
 						{
 							"key": "Content-Length",
-							"value": "1130"
+							"value": "555"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"tasks\": [\n        {\n            \"ID\": 12,\n            \"id\": \"7d7fff43-58a4-48e3-a89c-5b2419be9db4\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T11:39:27.56931Z\",\n            \"UpdatedAt\": \"2025-05-06T11:39:27.56931Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"AssignedTo\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 2,\n                    \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                    \"name\": \"Test User\",\n                    \"email\": \"test@example.com\",\n                    \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                    \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n                }\n            ]\n        }\n    ]\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"tasks\": [\n            {\n                \"id\": \"19b42826-7111-45ab-b60e-1e78284a51ab\",\n                \"title\": \"New Task 7777\",\n                \"description\": \"Task description\",\n                \"completed\": true,\n                \"created_at\": \"2025-05-08T13:44:34.212545Z\",\n                \"updated_at\": \"2025-05-08T13:48:49.309641Z\",\n                \"created_by\": {\n                    \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n                    \"name\": \"Test User\",\n                    \"email\": \"test@example.com\"\n                },\n                \"assigned_to\": {\n                    \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n                    \"name\": \"Test User\",\n                    \"email\": \"test@example.com\"\n                },\n                \"users\": [\n                    {\n                        \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n                        \"name\": \"Test User\",\n                        \"email\": \"test@example.com\"\n                    }\n                ]\n            }\n        ]\n    }\n}"
 				}
 			]
 		},
@@ -687,17 +808,16 @@
 			},
 			"response": [
 				{
-					"name": "Get User Tasks created.",
+					"name": "Get User Tasks created",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/users/tasks/created",
+							"raw": "{{base_url}}/tasks/created",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"users",
 								"tasks",
 								"created"
 							]
@@ -713,15 +833,15 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 06 May 2025 11:45:26 GMT"
+							"value": "Thu, 08 May 2025 13:50:23 GMT"
 						},
 						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
+							"key": "Content-Length",
+							"value": "347"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"tasks\": [\n        {\n            \"ID\": 13,\n            \"id\": \"80bdfe78-5dc3-4821-80e4-f969b421d81c\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": true,\n            \"CreatedAt\": \"2025-05-06T11:40:44.481612Z\",\n            \"UpdatedAt\": \"2025-05-06T11:40:44.481612Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n            \"AssignedTo\": {\n                \"ID\": 6,\n                \"id\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n                \"name\": \"Test1111 User\",\n                \"email\": \"test1111@example.com\",\n                \"password\": \"$2a$10$CyZ9MomZQvjGetLQDoBE.eR1Kk3LGfczj5r1xqA6AihREnNIMVk/6\",\n                \"CreatedAt\": \"2025-05-06T12:39:05.973732Z\",\n                \"UpdatedAt\": \"2025-05-06T12:39:05.973732Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 6,\n                    \"id\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n                    \"name\": \"Test1111 User\",\n                    \"email\": \"test1111@example.com\",\n                    \"password\": \"$2a$10$CyZ9MomZQvjGetLQDoBE.eR1Kk3LGfczj5r1xqA6AihREnNIMVk/6\",\n                    \"CreatedAt\": \"2025-05-06T12:39:05.973732Z\",\n                    \"UpdatedAt\": \"2025-05-06T12:39:05.973732Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 12,\n            \"id\": \"7d7fff43-58a4-48e3-a89c-5b2419be9db4\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T11:39:27.56931Z\",\n            \"UpdatedAt\": \"2025-05-06T11:39:27.56931Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"AssignedTo\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 2,\n                    \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                    \"name\": \"Test User\",\n                    \"email\": \"test@example.com\",\n                    \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                    \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 11,\n            \"id\": \"64430453-5d35-4c4f-95ec-fa89a0e907a6\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T09:39:27.568255Z\",\n            \"UpdatedAt\": \"2025-05-06T09:39:27.568255Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"AssignedTo\": {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 10,\n            \"id\": \"bd99ff60-104f-472f-a9dc-7dd3bd009b6a\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T08:45:22.507832Z\",\n            \"UpdatedAt\": \"2025-05-06T08:45:22.507832Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"AssignedTo\": {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 8,\n            \"id\": \"57ce1111-1e95-4dc6-86b2-d444581a28ef\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T08:00:29.525996Z\",\n            \"UpdatedAt\": \"2025-05-06T08:00:29.525996Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"AssignedTo\": {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 7,\n            \"id\": \"499a9ca8-d785-4da5-9c51-003ceb8913b2\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T07:30:03.126029Z\",\n            \"UpdatedAt\": \"2025-05-06T07:30:03.126029Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"AssignedTo\": {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 5,\n            \"id\": \"f5355cb6-a8a7-4b8e-9ce3-4403cb3c84a3\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": true,\n            \"CreatedAt\": \"2025-05-06T06:59:13.090081Z\",\n            \"UpdatedAt\": \"2025-05-06T06:59:13.090081Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"3176f652-d692-4a50-bd67-be8c1f5b9d46\",\n            \"AssignedTo\": {\n                \"ID\": 4,\n                \"id\": \"3176f652-d692-4a50-bd67-be8c1f5b9d46\",\n                \"name\": \"Test11 User\",\n                \"email\": \"test11@example.com\",\n                \"password\": \"$2a$10$OMg7RBMcolIgDmGUdtXwg.RxB7EU0XYqhFcAoWDw.4/xztkVLRnjC\",\n                \"CreatedAt\": \"2025-05-06T10:27:10.80569Z\",\n                \"UpdatedAt\": \"2025-05-06T10:27:10.80569Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                },\n                {\n                    \"ID\": 2,\n                    \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                    \"name\": \"Test User\",\n                    \"email\": \"test@example.com\",\n                    \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                    \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n                },\n                {\n                    \"ID\": 3,\n                    \"id\": \"fefee336-1435-4d68-8df7-66d8ba488b1c\",\n                    \"name\": \"Test1 User\",\n                    \"email\": \"test1@example.com\",\n                    \"password\": \"$2a$10$KAMTiw63IIPZHr.ZCAXcseuumqzorEH6JracmGwvCcsKNZx7.RwCS\",\n                    \"CreatedAt\": \"2025-05-06T10:06:27.759801Z\",\n                    \"UpdatedAt\": \"2025-05-06T10:06:27.759801Z\"\n                },\n                {\n                    \"ID\": 4,\n                    \"id\": \"3176f652-d692-4a50-bd67-be8c1f5b9d46\",\n                    \"name\": \"Test11 User\",\n                    \"email\": \"test11@example.com\",\n                    \"password\": \"$2a$10$OMg7RBMcolIgDmGUdtXwg.RxB7EU0XYqhFcAoWDw.4/xztkVLRnjC\",\n                    \"CreatedAt\": \"2025-05-06T10:27:10.80569Z\",\n                    \"UpdatedAt\": \"2025-05-06T10:27:10.80569Z\"\n                }\n            ]\n        }\n    ]\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"tasks\": [\n            {\n                \"id\": \"19b42826-7111-45ab-b60e-1e78284a51ab\",\n                \"title\": \"New Task 7777\",\n                \"description\": \"Task description\",\n                \"completed\": true,\n                \"created_at\": \"2025-05-08T13:44:34.212545Z\",\n                \"updated_at\": \"2025-05-08T13:48:49.309641Z\",\n                \"created_by\": {\n                    \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n                    \"name\": \"Test User\",\n                    \"email\": \"test@example.com\"\n                }\n            }\n        ]\n    }\n}"
 				}
 			]
 		},
@@ -743,17 +863,16 @@
 			},
 			"response": [
 				{
-					"name": "Get User Tasks.",
+					"name": "Get User Tasks",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/users/tasks",
+							"raw": "{{base_url}}/tasks",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"users",
 								"tasks"
 							]
 						}
@@ -768,15 +887,15 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 06 May 2025 11:45:45 GMT"
+							"value": "Thu, 08 May 2025 13:50:15 GMT"
 						},
 						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
+							"key": "Content-Length",
+							"value": "347"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"tasks\": [\n        {\n            \"ID\": 13,\n            \"id\": \"80bdfe78-5dc3-4821-80e4-f969b421d81c\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": true,\n            \"CreatedAt\": \"2025-05-06T11:40:44.481612Z\",\n            \"UpdatedAt\": \"2025-05-06T11:40:44.481612Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n            \"AssignedTo\": {\n                \"ID\": 6,\n                \"id\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n                \"name\": \"Test1111 User\",\n                \"email\": \"test1111@example.com\",\n                \"password\": \"$2a$10$CyZ9MomZQvjGetLQDoBE.eR1Kk3LGfczj5r1xqA6AihREnNIMVk/6\",\n                \"CreatedAt\": \"2025-05-06T12:39:05.973732Z\",\n                \"UpdatedAt\": \"2025-05-06T12:39:05.973732Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 6,\n                    \"id\": \"a2fc6362-8963-4815-86c2-f5ff39d3c110\",\n                    \"name\": \"Test1111 User\",\n                    \"email\": \"test1111@example.com\",\n                    \"password\": \"$2a$10$CyZ9MomZQvjGetLQDoBE.eR1Kk3LGfczj5r1xqA6AihREnNIMVk/6\",\n                    \"CreatedAt\": \"2025-05-06T12:39:05.973732Z\",\n                    \"UpdatedAt\": \"2025-05-06T12:39:05.973732Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 12,\n            \"id\": \"7d7fff43-58a4-48e3-a89c-5b2419be9db4\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T11:39:27.56931Z\",\n            \"UpdatedAt\": \"2025-05-06T11:39:27.56931Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"AssignedTo\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 2,\n                    \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                    \"name\": \"Test User\",\n                    \"email\": \"test@example.com\",\n                    \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                    \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 11,\n            \"id\": \"64430453-5d35-4c4f-95ec-fa89a0e907a6\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T09:39:27.568255Z\",\n            \"UpdatedAt\": \"2025-05-06T09:39:27.568255Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"AssignedTo\": {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 10,\n            \"id\": \"bd99ff60-104f-472f-a9dc-7dd3bd009b6a\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T08:45:22.507832Z\",\n            \"UpdatedAt\": \"2025-05-06T08:45:22.507832Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"AssignedTo\": {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 8,\n            \"id\": \"57ce1111-1e95-4dc6-86b2-d444581a28ef\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T08:00:29.525996Z\",\n            \"UpdatedAt\": \"2025-05-06T08:00:29.525996Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"AssignedTo\": {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 7,\n            \"id\": \"499a9ca8-d785-4da5-9c51-003ceb8913b2\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": false,\n            \"CreatedAt\": \"2025-05-06T07:30:03.126029Z\",\n            \"UpdatedAt\": \"2025-05-06T07:30:03.126029Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"966913e2-5510-42e2-a032-564b1884df52\",\n            \"AssignedTo\": {\n                \"ID\": 1,\n                \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                \"name\": \"Test User5577\",\n                \"email\": \"test75577@example.com\",\n                \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                }\n            ]\n        },\n        {\n            \"ID\": 5,\n            \"id\": \"f5355cb6-a8a7-4b8e-9ce3-4403cb3c84a3\",\n            \"title\": \"New Task 7777\",\n            \"description\": \"Task description\",\n            \"Completed\": true,\n            \"CreatedAt\": \"2025-05-06T06:59:13.090081Z\",\n            \"UpdatedAt\": \"2025-05-06T06:59:13.090081Z\",\n            \"CreatedByID\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n            \"CreatedBy\": {\n                \"ID\": 2,\n                \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                \"name\": \"Test User\",\n                \"email\": \"test@example.com\",\n                \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n            },\n            \"AssignedToID\": \"3176f652-d692-4a50-bd67-be8c1f5b9d46\",\n            \"AssignedTo\": {\n                \"ID\": 4,\n                \"id\": \"3176f652-d692-4a50-bd67-be8c1f5b9d46\",\n                \"name\": \"Test11 User\",\n                \"email\": \"test11@example.com\",\n                \"password\": \"$2a$10$OMg7RBMcolIgDmGUdtXwg.RxB7EU0XYqhFcAoWDw.4/xztkVLRnjC\",\n                \"CreatedAt\": \"2025-05-06T10:27:10.80569Z\",\n                \"UpdatedAt\": \"2025-05-06T10:27:10.80569Z\"\n            },\n            \"users\": [\n                {\n                    \"ID\": 1,\n                    \"id\": \"966913e2-5510-42e2-a032-564b1884df52\",\n                    \"name\": \"Test User5577\",\n                    \"email\": \"test75577@example.com\",\n                    \"password\": \"$2a$10$83GO7VX6rkJiZN1I/vEOV./.8.RVxf9C4TVrSb.0twjrXRpPxZIr6\",\n                    \"CreatedAt\": \"2025-05-05T20:56:23.496417Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:23.496417Z\"\n                },\n                {\n                    \"ID\": 2,\n                    \"id\": \"ea44c08e-c300-4258-bfc0-cdb3837cd6be\",\n                    \"name\": \"Test User\",\n                    \"email\": \"test@example.com\",\n                    \"password\": \"$2a$10$73VX3KoIqQqzbeqahUu/xeZlX1YIKtaPLv.e3UDCkkFHRluGAnCOC\",\n                    \"CreatedAt\": \"2025-05-05T20:56:54.00659Z\",\n                    \"UpdatedAt\": \"2025-05-05T20:56:54.00659Z\"\n                },\n                {\n                    \"ID\": 3,\n                    \"id\": \"fefee336-1435-4d68-8df7-66d8ba488b1c\",\n                    \"name\": \"Test1 User\",\n                    \"email\": \"test1@example.com\",\n                    \"password\": \"$2a$10$KAMTiw63IIPZHr.ZCAXcseuumqzorEH6JracmGwvCcsKNZx7.RwCS\",\n                    \"CreatedAt\": \"2025-05-06T10:06:27.759801Z\",\n                    \"UpdatedAt\": \"2025-05-06T10:06:27.759801Z\"\n                },\n                {\n                    \"ID\": 4,\n                    \"id\": \"3176f652-d692-4a50-bd67-be8c1f5b9d46\",\n                    \"name\": \"Test11 User\",\n                    \"email\": \"test11@example.com\",\n                    \"password\": \"$2a$10$OMg7RBMcolIgDmGUdtXwg.RxB7EU0XYqhFcAoWDw.4/xztkVLRnjC\",\n                    \"CreatedAt\": \"2025-05-06T10:27:10.80569Z\",\n                    \"UpdatedAt\": \"2025-05-06T10:27:10.80569Z\"\n                }\n            ]\n        }\n    ]\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"tasks\": [\n            {\n                \"id\": \"19b42826-7111-45ab-b60e-1e78284a51ab\",\n                \"title\": \"New Task 7777\",\n                \"description\": \"Task description\",\n                \"completed\": true,\n                \"created_at\": \"2025-05-08T13:44:34.212545Z\",\n                \"updated_at\": \"2025-05-08T13:48:49.309641Z\",\n                \"created_by\": {\n                    \"id\": \"a0de2a8c-d0f7-4134-8173-eef87a125975\",\n                    \"name\": \"Test User\",\n                    \"email\": \"test@example.com\"\n                }\n            }\n        ]\n    }\n}"
 				}
 			]
 		}

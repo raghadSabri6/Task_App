@@ -4,31 +4,36 @@ services:
   app:
     build: .
     ports:
-      - "8081:8080"
+      - "8081:8081"  
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
     environment:
-      - PORT=8080
-      - DB_URL=postgres://postgres:root@db:5432/task2?sslmode=disable
-      - SECRET=SEDKHG776RFYGI986GHKNV
-      - EMAIL_SENDER=s11924224@stu.najah.edu
-      - EMAIL_PASSWORD=nxiu geqb peri kyai
-      - TOKEN_EXPIRATION=2592000
-      - base_url=http://localhost:8081/api/v1
+      # Override DB_URL to use the container name instead of localhost
+      - DB_URL=postgres://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-root}@db:5432/${POSTGRES_DB:-task2}?sslmode=disable
     networks:
       - app-network
+    restart: on-failure
 
   db:
     image: postgres:16-alpine
     restart: always
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=task2
+    env_file:
+      - .env.docker
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    command: >
+      bash -c "echo 'CREATE EXTENSION IF NOT EXISTS \"uuid-ossp\";' > /docker-entrypoint-initdb.d/init.sql && 
+      docker-entrypoint.sh postgres"
     networks:
       - app-network
 
