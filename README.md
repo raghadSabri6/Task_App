@@ -24,6 +24,7 @@ This project has been refactored to follow Clean Architecture principles and the
 │       ├── auth/         # Authentication
 │       ├── config/       # Configuration
 │       ├── database/     # Database connection
+│       ├── dependencies/ # Application dependencies
 │       ├── middleware/   # HTTP middleware
 │       ├── persistence/  # Database models
 │       ├── router/       # HTTP router
